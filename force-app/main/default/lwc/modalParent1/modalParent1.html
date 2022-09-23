@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="C2P SIMPLE EVENT">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+                label="Show Modal"
+                variant="brand"
+                onclick={modalHandler}>
+            </lightning-button>
+            <template if:true={showmodal}>
+                <c-modal-child1 onclose={closeHandler}></c-modal-child1>
+            </template>
+        </div>
+    </lightning-card>
+</template>

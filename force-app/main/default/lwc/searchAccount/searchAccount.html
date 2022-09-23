@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="SEARCH ACCOUNTS" icon-name="standard:account">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                label="Start entering key words to get matching accounts!"
+                type="search"
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <lightning-datatable
+            key-field="Id"
+            data={accounts}
+            columns={columns}>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

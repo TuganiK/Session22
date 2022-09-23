@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="CONDITIONAL RENDERING">
+        <div class="slds-var-m-around_medium">
+            <template if:true={name}>
+                Your name visible...{name}<br/>
+            </template>
+            <template if:true={course}> 
+                Your course name visible...{course}
+            </template>
+    </div>
+    </lightning-card>
+</template>

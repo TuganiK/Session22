@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title = "LWC FUNDAMENTALS">
+      <div class="slds-var-m-around_medium">
+          <lightning-input
+          type="text"
+          value={value}
+          label="Enter your name"
+          onkeyup={changeHandler1}>
+      </lightning-input>
+      <lightning-input
+      type="integer"
+      value={value}
+      label="Enter your age"
+      onkeyup={changeHandler2}>
+  </lightning-input>
+      <div>
+        <b>Hello, my name is {myName} and my age is : {myAge}
+        </b>
+      </div>
+      </div>
+    </lightning-card> 
+  </template>

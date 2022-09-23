@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="TEMPLATE LOOPING ON ARRAY OF OBJECTS">
+        <div class="slds-var-m-around_medium">
+            <template for:each={contacts} for:item="contact">
+                <div key={contact.name}><strong>Name</strong>:{contact.name} &nbsp;
+                    <strong>Role</strong>:{contact.role}<br/>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

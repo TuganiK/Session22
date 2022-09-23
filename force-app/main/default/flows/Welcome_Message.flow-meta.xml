@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Hello World {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Welcome Message</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <description>First Hello world Screen</description>
+        <name>Hello_World_Screen</name>
+        <label>Hello World Screen</label>
+        <locationX>217</locationX>
+        <locationY>199</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NewHeader</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;Welcome To My Humble World!&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>WelcomeMessage</name>
+            <fieldText>&lt;p&gt;&lt;strong style=&quot;font-size: 14px;&quot;&gt;&lt;em&gt;&lt;img src=&quot;https://tuganikllc-dev-ed--c.documentforce.com/sfc/servlet.shepherd/version/download/0688b00000L5CzW?asPdf=false&amp;amp;operationContext=CHATTER&quot; alt=&quot;Screenshot 2022-08-30 222943.png&quot;&gt;Hello World ! &lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(234, 15, 22);&quot;&gt;I am a &lt;/span&gt;&lt;strong style=&quot;color: rgb(34, 34, 34);&quot;&gt;{!$User.FirstName}&lt;/strong&gt;&lt;span style=&quot;color: rgb(234, 15, 22);&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: rgb(21, 20, 20);&quot;&gt;{!$User.LastName}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Run forest run</nextOrFinishButtonLabel>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>418</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Hello_World_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Draft</status>
+</Flow>

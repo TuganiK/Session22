@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="RENDERED CALLBACK">
+        <div class="slds-var-m-around_medium">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <lightning-input
+                        label="Enter your name"
+                        type="text"
+                        value={name}
+                        onchange={changeHandler}>
+                    </lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-button 
+                        label="Show/Hide"
+                        variant="brand"
+                        onclick={showHandler}>
+                    </lightning-button>
+                </div>
+            </div>
+            <template if:true={showChild}>
+                <c-disconnected-callback-child name={name}></c-disconnected-callback-child>
+            </template>            
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="OPPORTUNITY-RECORD-PICKLIST-INFORMATION" icon-name="satandard:opportunity">
+        <div class="slds-var-m-around_medium">
+        <lightning-input 
+            label="Opprtunity Name"
+            name="Name" 
+            type="'text"
+            onchange={changeHandler}>
+            </lightning-input>     
+            <lightning-combobox
+            label="Stage"
+            name="Stage"
+            options={stageOptions}
+            value={selectedStage}
+            onchange={changeHandler}>
+           </lightning-combobox>
+            <lightning-combobox
+            label="Type"
+            name="Type"
+            options={typeOptions}
+            value={selectedType}
+            onchange={changeHandler}>
+           </lightning-combobox>
+           <div class="slds-var-m-top_x-small">
+            <strong> Thanks for choising the correct information. You have entered</strong> <br/>
+           <strong> Opportunity Name:</strong>{Name}<br/>
+           <strong> Stage Name:</strong>{selectedStage}<br/>
+           <strong> Opportunity Type:</strong>{selectedType}<br/>
+        </div> 
+    </div>
+    </lightning-card>
+</template>

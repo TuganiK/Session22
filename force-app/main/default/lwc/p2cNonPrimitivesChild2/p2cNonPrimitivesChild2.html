@@ -1,0 +1,8 @@
+<template>
+    <template for:each={contacts} for:item="con">
+        <div key={con.FirstName} class="slds-var-m-around_medium">
+            <strong>{con.FirstName} {con.LastName}</strong> <br/>
+            {con.Title}, {con.Department}
+        </div>
+    </template>
+</template>

@@ -1,0 +1,46 @@
+<template>
+ <!--Create a form to grab case information from users and
+ create a case record when user clicks on the save button.
+The form should have the following fields for inputting data
+Subject
+Description
+Account Name
+Contact Name
+Priority-->
+    <lightning-card title="LIGHTNING RECORD EDIT FORM : CASE" icon-name="standard:case">
+        <div class="slds-var-m-around_medium">
+            <!-- lightning record edit form -->
+            <lightning-record-edit-form
+                record-id={recordId}
+                object-api-name={objectName}
+                onsuccess={successHandler}>
+                <!-- lightning input fields -->
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                        <lightning-input-field field-name={fields.accountName}></lightning-input-field>
+                        <lightning-input-field field-name={fields.subject}></lightning-input-field>
+                        <lightning-input-field field-name={fields.priority}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                        <lightning-input-field field-name={fields.contactName}></lightning-input-field>
+                        <lightning-input-field field-name={fields.description}></lightning-input-field>   
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button
+                        label="Cancel"
+                        variant="neutral"
+                        class="slds-var-m-right_x-small"
+                        type="reset">
+                    </lightning-button>
+                    <lightning-button
+                        label="Save"
+                        variant="brand"
+                        type="submit">
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+    </lightning-card>
+</template>

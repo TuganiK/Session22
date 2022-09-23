@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>Hello World-2 {!$Flow.CurrentDateTime}{!WelcomeMessage}</interviewLabel>
+    <label>Hello World-2</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Hello_My_First_Flow</name>
+        <label>Hello My First Flow</label>
+        <locationX>347</locationX>
+        <locationY>221</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>WelcomeMessage</name>
+            <fieldText>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;color: rgb(215, 70, 113); font-size: 16px;&quot;&gt;&lt;em&gt;Hello &lt;/em&gt;&lt;/strong&gt;&lt;strong style=&quot;color: rgb(81, 169, 134); font-size: 16px;&quot;&gt;&lt;em&gt;World&lt;/em&gt;&lt;/strong&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;&lt;em&gt;!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;&lt;em&gt;I am &lt;/em&gt;&lt;/strong&gt;&lt;strong style=&quot;font-size: 16px; color: rgb(18, 129, 199);&quot;&gt;&lt;em&gt;Kurt &lt;/em&gt;&lt;/strong&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;&lt;em&gt;:)&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <nextOrFinishButtonLabel>Click Me</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>388</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Hello_My_First_Flow</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

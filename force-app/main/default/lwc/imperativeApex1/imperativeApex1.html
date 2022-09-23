@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="SEARCH CONTACTS" icon-name="standard:contact">
+        <div class="slds-var-m-around_medium">
+            <lightning-input
+                type="search"
+                label="Start entering search keys to see matching contacts..."
+                onkeyup={changeHandler}>
+            </lightning-input>
+            <div class="slds-var-m-top_small">
+                <!--Display the result if defined-->
+                <template if:true={contacts}>
+                    <template for:each={contacts} for:item="con">
+                        <div key={con.Id} class="slds-var-m-bottom_small">
+                            <strong>{con.FirstName} {con.LastName}</strong> <br/>
+                            {con.Title}, {con.Department}
+                        </div>
+                    </template>
+                </template>
+                <!--Display the error if defined-->
+                <template if:true={error}>
+                    {error}
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
